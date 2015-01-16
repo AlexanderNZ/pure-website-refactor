@@ -77,33 +77,37 @@
 
             var treeData = [
                 {
-                    "name": "Top Level",
+                    "name": "Alex",
                     "parent": "null",
                     "children": [
                         {
-                            "name": "Level 2: A",
-                            "parent": "Top Level",
+                            "name": "Skills",
+                            "parent": "Alex",
                             "children": [
                                 {
-                                    "name": "Son of A",
-                                    "parent": "Level 2: A"
+                                    "name": "University",
+                                    "parent": "Skills"
                                 },
                                 {
-                                    "name": "Daughter of A",
-                                    "parent": "Level 2: A"
+                                    "name": "Non-University",
+                                    "parent": "Skills"
                                 }
                             ]
                         },
                         {
-                            "name": "Level 2: B",
-                            "parent": "Top Level"
+                            "name": "Experience",
+                            "parent": "Alex"
+                        },
+                        {
+                            "name": "Traits",
+                            "parent": "Alex"
                         }
                     ]
                 }
             ];
 
             // ************** Generate the tree diagram	 *****************
-            var margin = {top: 20, right: 120, bottom: 20, left: 120},
+            var margin = {top: 50, right: 120, bottom: 20, left: 120},
                     width = 960 - margin.right - margin.left,
                     height = 500 - margin.top - margin.bottom;
 
@@ -115,9 +119,7 @@
                     .size([height, width]);
 
             var diagonal = d3.svg.diagonal()
-                    .projection(function (d) {
-                        return [d.y, d.x];
-                    });
+                    .projection(function(d) { return [d.x, d.y]; });
 
             var svg = d3.select("body").append("svg")
                     .attr("width", width + margin.right + margin.left)
@@ -141,7 +143,7 @@
 
                 // Normalize for fixed-depth.
                 nodes.forEach(function (d) {
-                    d.y = d.depth * 180;
+                    d.y = d.depth * 100;
                 });
 
                 // Update the nodes…
@@ -158,6 +160,8 @@
                         })
                         .on("click", click);
 
+
+
                 nodeEnter.append("circle")
                         .attr("r", 1e-6)
                         .style("fill", function (d) {
@@ -165,23 +169,18 @@
                         });
 
                 nodeEnter.append("text")
-                        .attr("x", function (d) {
-                            return d.children || d._children ? -13 : 13;
-                        })
+                        .attr("y", function(d) {
+                            return d.children || d._children ? -18 : 18; })
                         .attr("dy", ".35em")
-                        .attr("text-anchor", function (d) {
-                            return d.children || d._children ? "end" : "start";
-                        })
-                        .text(function (d) {
-                            return d.name;
-                        })
-                        .style("fill-opacity", 1e-6);
+                        .attr("text-anchor", "middle")
+                        .text(function(d) { return d.name; })
+                        .style("fill-opacity", 1);
 
                 // Transition nodes to their new position.
                 var nodeUpdate = node.transition()
                         .duration(duration)
                         .attr("transform", function (d) {
-                            return "translate(" + d.y + "," + d.x + ")";
+                            return "translate(" + d.x + "," + d.y + ")";
                         });
 
                 nodeUpdate.select("circle")
