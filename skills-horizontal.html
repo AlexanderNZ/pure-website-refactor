@@ -75,57 +75,6 @@
 
         <script>
 
-            var treeData = [
-                {
-                    "name": "Alex",
-                    "parent": "null",
-                    "children": [
-                        {
-                            "name": "Skills",
-                            "parent": "Alex",
-                            "children": [
-                                {
-                                    "name": "University",
-                                    "parent": "Skills"
-                                },
-                                {
-                                    "name": "Non-University",
-                                    "parent": "Skills"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Experience",
-                            "parent": "Alex",
-                            "children": [
-                                {
-                                    "name": "Army",
-                                    "parent": "Experience"
-                                },
-                                {
-                                    "name": "Spark Ventures",
-                                    "parent": "Experience"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Traits",
-                            "parent": "Alex",
-                            "children": [
-                                {
-                                    "name": "Multi-Tasking",
-                                    "parent": "Traits"
-                                },
-                                {
-                                    "name": "Time Management",
-                                    "parent": "Traits"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ];
-
             // ************** Generate the tree diagram	 *****************
             var margin = {top: 20, right: 120, bottom: 20, left: 200},
                     width = 960 - margin.right - margin.left,
@@ -147,9 +96,14 @@
                     .append("g")
                     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-            root = treeData[0];
-            root.x0 = height / 2;
-            root.y0 = 0;
+            d3.json("treeData.json", function(error, treeData) {
+                root = treeData[0];
+                root.x0 = height / 2;
+                root.y0 = 0;
+                update(root);
+            });
+
+
 
             update(root);
 

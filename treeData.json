@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Alex",
+    "parent": "null",
+    "children": [
+      {
+        "name": "Skills",
+        "parent": "Alex",
+        "children": [
+          {
+            "name": "University",
+            "parent": "Skills"
+          },
+          {
+            "name": "Non-University",
+            "parent": "Skills"
+          }
+        ]
+      },
+      {
+        "name": "Experience",
+        "parent": "Alex",
+        "children": [
+          {
+            "name": "Army",
+            "parent": "Experience"
+          },
+          {
+            "name": "Spark Ventures",
+            "parent": "Experience"
+          }
+        ]
+      },
+      {
+        "name": "Traits",
+        "parent": "Alex",
+        "children": [
+          {
+            "name": "Multi-Tasking",
+            "parent": "Traits"
+          },
+          {
+            "name": "Time Management",
+            "parent": "Traits"
+          },
+          {
+            "name": "Cool Under Pressure",
+            "parent": "Traits"
+          }
+        ]
+      }
+    ]
+  }
+]
