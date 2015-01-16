@@ -9,11 +9,251 @@
         "children": [
           {
             "name": "University",
-            "parent": "Skills"
+            "parent": "Skills",
+            "children": [
+              {
+                "name": "Geography",
+                "parent": "University",
+                "children": [
+                  {
+                    "name": "Stage 1",
+                    "parent": "Geography",
+                    "children": [
+                      {
+                        "name": "Earth Surface Processes and Landforms",
+                        "parent": "Stage 1"
+                      },
+                      {
+                        "name": "Geography of the Human Environment",
+                        "parent": "Stage 1"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Stage 2",
+                    "parent": "Geography",
+                    "children": [
+                      {
+                        "name": "GIS and Spatial Thinking",
+                        "parent": "Stage 2"
+                      },
+                      {
+                        "name": "Field Studies in Earth Surface Processes",
+                        "parent": "Stage 2"
+                      },
+                      {
+                        "name": "Climate, Hydrology and Biogeography",
+                        "parent": "Stage 2"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Stage 3",
+                    "parent": "Geography",
+                    "children": [
+                      {
+                        "name": "Remote Sensing and GIS",
+                        "parent": "Stage 3"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Computer Science",
+                "parent": "University",
+                "children": [
+                  {
+                    "name": "Web Technologies",
+                    "parent": "Computer Science",
+                    "children": [
+                      {
+                        "name": "JavaScript",
+                        "parent": "Web Technologies"
+                      },
+                      {
+                        "name": "HTML5 and CSS",
+                        "parent": "Web Technologies"
+                      },
+                      {
+                        "name": "D3 and Leaflet",
+                        "parent": "Web Technologies"
+                      },
+                      {
+                        "name": "Selenium",
+                        "parent": "Web Technologies"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Languages",
+                    "parent": "Computer Science",
+                    "children": [
+                      {
+                        "name": "Fluent In",
+                        "parent": "Languages",
+                        "children": [
+                          {
+                            "name": "Java",
+                            "parent": "Fluent In"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Learning Now",
+                        "parent": "Languages",
+                        "children": [
+                          {
+                            "name": "Python",
+                            "parent": "Learning Now"
+                          },
+                          {
+                            "name": "JavaScript",
+                            "parent": "Learning Now"
+                          },
+                          {
+                            "name": "C",
+                            "parent": "Learning Now"
+                          },
+                          {
+                            "name": "Bash",
+                            "parent": "Learning Now"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Interested In",
+                        "parent": "Languages",
+                        "children": [
+                          {
+                            "name": "C#",
+                            "parent": "Interested In"
+                          },
+                          {
+                            "name": "C++",
+                            "parent": "Interested In"
+                          },
+                          {
+                            "name": "R",
+                            "parent": "Interested In"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Concepts",
+                    "parent": "Computer Science",
+                    "children": [
+                      {
+                        "name": "Skilled In",
+                        "parent": "Concepts",
+                        "children": [
+                          {
+                            "name": "Object Oriented Programming",
+                            "parent": "Concepts"
+                          },
+                          {
+                            "name": "Version Control",
+                            "parent": "Concepts"
+                          },
+                          {
+                            "name": "Algorithms",
+                            "parent": "Concepts"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Learning Now",
+                        "parent": "Concepts",
+                        "children": [
+                          {
+                            "name": "Test Driven Development",
+                            "parent": "Concepts"
+                          },
+                          {
+                            "name": "Databases",
+                            "parent": "Concepts"
+                          },
+                          {
+                            "name": "Low Level Programming",
+                            "parent": "Concepts"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Interested In",
+                        "parent": "Concepts",
+                        "children": [
+                          {
+                            "name": "Visualisation",
+                            "parent": "Concepts"
+                          },
+                          {
+                            "name": "Big Data",
+                            "parent": "Concepts"
+                          },
+                          {
+                            "name": "Augmented Reality",
+                            "parent": "Concepts"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             "name": "Non-University",
-            "parent": "Skills"
+            "parent": "Skills",
+            "children": [
+              {
+                "name": "Multi-Tasking",
+                "parent": "Skills"
+              },
+              {
+                "name": "Strong Work Ethic",
+                "parent": "Non-University"
+              },
+              {
+                "name": "Positive Outlook",
+                "parent": "Non-University"
+              },
+              {
+                "name": "Team Communication",
+                "parent": "Non-University"
+              },
+              {
+                "name": "Rapid Adaptation",
+                "parent": "Non-University"
+              },
+              {
+                "name": "Rapid Learning",
+                "parent": "Non-University"
+              },
+              {
+                "name": "Training and Mentoring",
+                "parent": "Non-University"
+              },
+              {
+                "name": "'Sole Charge' Work",
+                "parent": "Non-University"
+              },
+              {
+                "name": "Group Work",
+                "parent": "Non-University"
+              },
+              {
+                "name": "Cool Under Pressure",
+                "parent": "Traits"
+              },
+              {
+                "name": "Time Management",
+                "parent": "Traits"
+              }
+            ]
           }
         ]
       },
@@ -23,29 +263,89 @@
         "children": [
           {
             "name": "Army",
-            "parent": "Experience"
+            "parent": "Experience",
+            "children": [
+              {
+                "name": "First Aid",
+                "parent": "Army"
+              },
+              {
+                "name": "Leadership",
+                "parent": "Army"
+              },
+              {
+                "name": "Small Unit Tactics",
+                "parent": "Army"
+              },
+              {
+                "name": "Counter Insurgency Operations",
+                "parent": "Army"
+              },
+              {
+                "name": "Stability and Security Operations",
+                "parent": "Army"
+              },
+              {
+                "name": "Civilian-Military Interaction",
+                "parent": "Army"
+              },
+              {
+                "name": "Liaison with NGOs and Foreign Government Agencies",
+                "parent": "Army"
+              },
+              {
+                "name": "Operations Other Than Conventional War",
+                "parent": "Army"
+              }
+            ]
           },
           {
             "name": "Spark Ventures",
-            "parent": "Experience"
+            "parent": "Experience",
+            "children": [
+              {
+                "name": "Full Stack Development",
+                "parent": "Spark Ventures"
+              },
+              {
+                "name": "Database Development",
+                "parent": "Spark Ventures"
+              },
+              {
+                "name": "Dev Ops",
+                "parent": "Spark Ventures"
+              },
+              {
+                "name": "QA and Testing",
+                "parent": "Spark Ventures"
+              }
+            ]
           }
         ]
       },
       {
-        "name": "Traits",
+        "name": "Hobbies and Down Time",
         "parent": "Alex",
         "children": [
           {
-            "name": "Multi-Tasking",
-            "parent": "Traits"
+            "name": "Paintball",
+            "parent": "Hobbies and Down Time"
           },
           {
-            "name": "Time Management",
-            "parent": "Traits"
+            "name": "White and Black Water Rafting",
+            "parent": "Hobbies and Down Time"
           },
           {
-            "name": "Cool Under Pressure",
-            "parent": "Traits"
+            "name": "Video Games",
+            "parent": "Hobbies and Down Time"
+          },
+          {
+            "name": "After Work Socialisation",
+            "parent": "Hobbies and Down Time"
+          },
+          {
+            "name": "Motorbike Road Trips",
+            "parent": "Hobbies and Down Time"
           }
         ]
       }
