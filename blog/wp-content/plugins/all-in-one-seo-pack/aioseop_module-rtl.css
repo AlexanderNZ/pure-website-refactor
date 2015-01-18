@@ -1,29 +1,36 @@
 .form-table.aioseop th {
     padding: 10px 9px 12px 0;
 }
+
 .aioseop_help_text_link, .aioseop_help_text_link:active {
     text-align: right;
     float: right;
     background: url('images/question.png') no-repeat top right;
 }
+
 .aioseop_help_text_link img {
     float: right;
 }
+
 .aioseop_label {
     padding-right: 50px;
     padding-left: 10px;
     text-align: right;
 }
+
 .aioseop input[type="text"] {
     padding: 10px 10px 10px 0px;
 }
+
 .aioseop textarea {
     padding: 10px 10px 0px 0px;
 }
+
 .aioseop_help_text_div {
-    text-align:right;
+    text-align: right;
     margin: 10px 0px 10px 0px;
 }
+
 .aioseop_help_text {
     float: right;
     clear: right;
@@ -33,6 +40,7 @@
 .aioseop_head_nav {
     float: right;
 }
+
 .aioseop_head_nav_tab {
     margin: 0 15px 0 0;
     border-width: 1px 1px 0;
@@ -44,6 +52,7 @@
     margin-right: 0px;
     margin-left: auto;
 }
+
 .aioseop_header {
     float: right;
     clear: right;
@@ -52,21 +61,26 @@
 .aioseop_adverts {
     float: left;
 }
+
 .aioseop_content {
     clear: right;
 }
+
 #aiosp_feature_manager_metabox.postbox {
     float: right;
 }
+
 .aioseop_sidebar {
     width: 457px;
     margin-right: 10px;
     margin-left: auto;
 }
+
 .aioseop_option_label {
     float: right;
     margin: 0px 5px 10px 0;
 }
+
 .aioseop_settings_left {
     float: right;
 }
@@ -78,22 +92,26 @@
 .aioseop_input {
     clear: right;
 }
+
 .aioseop_option_input {
     float: right;
     width: 61%;
     padding-right: 1px;
     padding-left: 0px;
 }
+
 #aiosp_sitemap_addl_pages {
     clear: right;
     margin-right: 20px;
     margin-left: auto;
     max-width: 1072px;
 }
+
 #aiosp_sitemap_addl_pages_metabox table.aioseop_table td {
     padding: 3px;
     padding-right: 5%;
 }
+
 .aioseop_top_label .aioseop_option_input,
 .aioseop_no_label .aioseop_option_input {
     width: 100%;
@@ -102,14 +120,17 @@
 .aioseop_settings_left .postbox {
     float: right;
 }
+
 .aioseop_option_setting_label {
     padding-right: 1px;
     padding-left: 0px;
 }
+
 #aiosp_settings_form .aioseop_no_label, .aioseop_no_label {
     float: right;
     margin: 0px 13px 0px 23px;
 }
+
 .aioseop_module.error.below-h2 {
     padding: 5px 0px;
     margin: 0px 0px 15px 477px !important;
@@ -133,6 +154,7 @@ form#aiosp_settings_form, .aioseop_tabs_div {
     padding-left: 477px;
     padding-right: 0px;
 }
+
 #aiosp_settings_form ul.sfwd_debug_settings li strong {
     float: right;
     text-align: left;

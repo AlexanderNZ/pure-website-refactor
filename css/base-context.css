@@ -462,7 +462,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 .pure button,
 .pure input[type="button"],
 .pure /* 1 */
-        input[type="reset"],
+         input[type="reset"],
 .pure input[type="submit"] {
     -webkit-appearance: button;
     /* 2 */

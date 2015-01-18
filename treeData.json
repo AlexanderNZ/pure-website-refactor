@@ -269,7 +269,6 @@
                 "name": "First Aid",
                 "parent": "Army"
               },
-
               {
                 "name": "Leadership",
                 "parent": "Army"
@@ -350,30 +349,32 @@
           }
         ]
       },
-      {"name": "Honors and Awards",
-      "parent": "Alex",
-      "children": [
-        {
-          "name": "Winning Team, Summer of Tech Auckland Hackfest 2014",
-          "parent": "Honors and Awards"
-        },
-        {
-          "name": "New Zealand Operational Service Medal",
-          "parent": "Honors and Awards"
-        },
-        {
-          "name": "New Zealand General Service Medal (Afghanistan)",
-          "parent": "Honors and Awards"
-        },
-        {
-          "name": "NATO Medal for the Non-Article 5 ISAF Operation in Afghanistan",
-          "parent": "Honors and Awards"
-        },
-        {
-          "name": "New Zealand Defence Service Medal",
-          "parent": "Honors and Awards"
-        }
-      ]}
+      {
+        "name": "Honors and Awards",
+        "parent": "Alex",
+        "children": [
+          {
+            "name": "Winning Team, Summer of Tech Auckland Hackfest 2014",
+            "parent": "Honors and Awards"
+          },
+          {
+            "name": "New Zealand Operational Service Medal",
+            "parent": "Honors and Awards"
+          },
+          {
+            "name": "New Zealand General Service Medal (Afghanistan)",
+            "parent": "Honors and Awards"
+          },
+          {
+            "name": "NATO Medal for the Non-Article 5 ISAF Operation in Afghanistan",
+            "parent": "Honors and Awards"
+          },
+          {
+            "name": "New Zealand Defence Service Medal",
+            "parent": "Honors and Awards"
+          }
+        ]
+      }
     ]
   }
 ]

@@ -2,18 +2,18 @@
  *   Unslider by @idiot
  */
 
-(function($, f) {
+(function ($, f) {
     //  If there's no jQuery, Unslider can't work, so kill the operation.
-    if(!$) return f;
+    if (!$) return f;
 
-    var Unslider = function() {
+    var Unslider = function () {
         //  Set up our elements
         this.el = f;
         this.items = f;
 
         //  Dimensions
         this.sizes = [];
-        this.max = [0,0];
+        this.max = [0, 0];
 
         //  Current inded
         this.current = 0;
@@ -34,7 +34,7 @@
         //  Create a deep clone for methods where context changes
         var _ = this;
 
-        this.init = function(el, opts) {
+        this.init = function (el, opts) {
             this.el = el;
             this.ul = el.children('ul');
             this.max = [el.outerWidth(), el.outerHeight()];
@@ -51,7 +51,7 @@
 
         //  Get the width for an element
         //  Pass a jQuery element as the context with .call(), and the index as a parameter: Unslider.calculate.call($('li:first'), 0)
-        this.calculate = function(index) {
+        this.calculate = function (index) {
             var me = $(this),
                 width = me.outerWidth(), height = me.outerHeight();
 
@@ -59,12 +59,12 @@
             _.sizes[index] = [width, height];
 
             //  Set the max values
-            if(width > _.max[0]) _.max[0] = width;
-            if(height > _.max[1]) _.max[1] = height;
+            if (width > _.max[0]) _.max[0] = width;
+            if (height > _.max[1]) _.max[1] = height;
         };
 
         //  Work out what methods need calling
-        this.setup = function() {
+        this.setup = function () {
             //  Set the main element
             this.el.css({
                 overflow: 'hidden',
@@ -76,7 +76,7 @@
             this.ul.css({width: (this.items.length * 100) + '%', position: 'relative'});
             this.items.css('width', (100 / this.items.length) + '%');
 
-            if(this.opts.delay !== f) {
+            if (this.opts.delay !== f) {
                 this.start();
                 this.el.hover(this.stop, this.start);
             }
@@ -88,8 +88,8 @@
             this.opts.dots && this.dots();
 
             //  Little patch for fluid-width sliders. Screw those guys.
-            if(this.opts.fluid) {
-                var resize = function() {
+            if (this.opts.fluid) {
+                var resize = function () {
                     _.el.css('width', Math.min(Math.round((_.el.outerWidth() / _.el.parent().outerWidth()) * 100), 100) + '%');
                 };
 
@@ -97,34 +97,35 @@
                 $(window).resize(resize);
             }
 
-            if(this.opts.arrows) {
+            if (this.opts.arrows) {
                 this.el.parent().append('<p class="arrows"><span class="prev">â†</span><span class="next">â†’</span></p>')
-                    .find('.arrows span').click(function() {
+                    .find('.arrows span').click(function () {
                         $.isFunction(_[this.className]) && _[this.className]();
                     });
-            };
+            }
+            ;
 
             //  Swipe support
-            if($.event.swipe) {
+            if ($.event.swipe) {
                 this.el.on('swipeleft', _.prev).on('swiperight', _.next);
             }
         };
 
         //  Move Unslider to a slide index
-        this.move = function(index, cb) {
+        this.move = function (index, cb) {
             //  If it's out of bounds, go to the first slide
-            if(!this.items.eq(index).length) index = 0;
-            if(index < 0) index = (this.items.length - 1);
+            if (!this.items.eq(index).length) index = 0;
+            if (index < 0) index = (this.items.length - 1);
 
             var target = this.items.eq(index);
             var obj = {height: target.outerHeight()};
             var speed = cb ? 5 : this.opts.speed;
 
-            if(!this.ul.is(':animated')) {
+            if (!this.ul.is(':animated')) {
                 //  Handle those pesky dots
                 _.el.find('.dot:eq(' + index + ')').addClass('active').siblings().removeClass('active');
 
-                this.el.animate(obj, speed) && this.ul.animate($.extend({left: '-' + index + '00%'}, obj), speed, function(data) {
+                this.el.animate(obj, speed) && this.ul.animate($.extend({left: '-' + index + '00%'}, obj), speed, function (data) {
                     _.current = index;
                     $.isFunction(_.opts.complete) && !cb && _.opts.complete(_.el);
                 });
@@ -132,20 +133,20 @@
         };
 
         //  Autoplay functionality
-        this.start = function() {
-            _.interval = setInterval(function() {
+        this.start = function () {
+            _.interval = setInterval(function () {
                 _.move(_.current + 1);
             }, _.opts.delay);
         };
 
         //  Stop autoplay
-        this.stop = function() {
+        this.stop = function () {
             _.interval = clearInterval(_.interval);
             return _;
         };
 
         //  Keypresses
-        this.keys = function(e) {
+        this.keys = function (e) {
             var key = e.which;
             var map = {
                 //  Prev/next
@@ -156,34 +157,40 @@
                 27: _.stop
             };
 
-            if($.isFunction(map[key])) {
+            if ($.isFunction(map[key])) {
                 map[key]();
             }
         };
 
         //  Arrow navigation
-        this.next = function() { return _.stop().move(_.current + 1) };
-        this.prev = function() { return _.stop().move(_.current - 1) };
+        this.next = function () {
+            return _.stop().move(_.current + 1)
+        };
+        this.prev = function () {
+            return _.stop().move(_.current - 1)
+        };
 
-        this.dots = function() {
+        this.dots = function () {
             //  Create the HTML
             var html = '<ol class="dots">';
-            $.each(this.items, function(index) { html += '<li class="dot' + (index < 1 ? ' active' : '') + '">' + (index + 1) + '</li>'; });
+            $.each(this.items, function (index) {
+                html += '<li class="dot' + (index < 1 ? ' active' : '') + '">' + (index + 1) + '</li>';
+            });
             html += '</ol>';
 
             //  Add it to the Unslider
-            this.el.addClass('has-dots').append(html).find('.dot').click(function() {
+            this.el.addClass('has-dots').append(html).find('.dot').click(function () {
                 _.move($(this).index());
             });
         };
     };
 
     //  Create a jQuery plugin
-    $.fn.unslider = function(o) {
+    $.fn.unslider = function (o) {
         var len = this.length;
 
         //  Enable multiple-slider support
-        return this.each(function(index) {
+        return this.each(function (index) {
             //  Cache a copy of $(this), so it
             var me = $(this);
             var instance = (new Unslider).init(me, o);
