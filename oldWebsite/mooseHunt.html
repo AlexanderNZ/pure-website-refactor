@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soldier's 5 | Moose Hunt </title>
+    <script src="js/jquery.min.js"> </script>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</head>
+<body>
+
+<div id="top-top" class="portfolio-headerbg">
+
+    <div class="header">
+
+        <div class="container">
+            <div class="logo">
+                <a href="http://www.4lex.nz">Alex Corkin</a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a class="scroll" href="http://www.4lex.nz">HOME</a></li>
+                    <li><a class="scroll" href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+
+    </div>
+
+    <div class="banner">
+        <div class="container">
+            <div class="banner-info">
+                <div class="bannerlogo">
+                </div>
+                <div class="bannerhead">
+                    <h2>My name is <span>Alex</span></h2>
+                    <h3>This is how I would capture a Moose.</h3>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+</div>
+
+<div class="content">
+
+    <div id="about" class="about">
+        <div class="container">
+            <div class="header-section text-center">
+                <h2><span> </span>ABOUT<span> </span></h2>
+            </div>
+            <span><p>This project was assigned to me by the University of Auckland School of Environment.
+                The aim was to take disparate geographic information and transform it into something that was useful to the layman.
+                In order to achieve this the data had to be gathered, processed and displayed accurately, briefly and clearly -
+                in a manner that is pleasing to the eye. The submission format required was an A3 Poster PDF,
+                though I am currently experimenting with a few APIs that might allow me to render it online!</p></span>
+
+            <div class="years">
+                <h4><b>Execution</b></h4>
+                <span><h4>ArcMap and ArcScene</h4></span>
+                <p>Using University licenced copies of the Arc Series from ESRI, I undertook the analysis in line with
+                    project requirements. Let me say right now that I LOVE ArcGIS, I'm a huge fan of the software set that
+                    ESRI produces and particularly enjoy the documentation - it is incredibly easy to commit a naive solution
+                    to a problem within the due date, then refine that solution at a later stage using the extensive documentation, as well as online community help available.</p>
+                <p>To complete this project I used the Spatial Analyst extension for ArcMap and ArcScene. I was supplied with a
+                    study extent shapefile, as well as a Digitel Elevation Model (Probably collected with a Satellite rather
+                    than LIDAR equipped aircraft). I was also given low resolution aerial imagery from one of the Universitys' other projects.</p>
+
+                <p>In order to complete the project I needed to figure out where the best places within the Dusky Sound
+                    (in the South Island of New Zealand) were, to place motion activated surveillance cameras that would capture Moose activity!</p>
+
+                <p>For the purposes of this project, Moose only lived in the study extent, within the following bounds:
+
+                <p>Below 500 metres in elevation.</p>
+                <p>On slopes less than 7.5 degrees.</p>
+                <p>Within 200 metres of a river.</p>
+                <p>   On South Westerly, Southern and South Eastern Slope Aspects</p>
+
+                <p>ArcMap was my go-to tool, particularly with the functions that I could access via Spatial Analyst.
+                    To solve the problem, I used the Slope, Aspect, Euclidean Distance, Reclassify, Mosaic and Raster Calculator
+                    tools that were part of the Spatial Analyst Extension</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="port" class="Portfolio">
+
+    <div class="Portfolio-section text-center">
+        <h2><span> </span>Maps and Imagery<span> </span></h2>
+        <h3>All of the product I created for this project can be found below. If you want to see the full size image, just click on it!</h3>
+
+        <div class="portfolio-grid">
+            <div class="col-md-4">
+                <a href="images/mooseHuntProject/DuskySoundOverview.jpg"><img src="images/mooseHuntProject/DuskySoundOverview.jpg"></a>
+                <p>This map provides an overview of the target area, with only the most critical information displayed.
+                    If you only have ten seconds to look at the target before you move, this is the map you want.</p>
+                <a class="rightarrow" href="images/mooseHuntProject/DuskySoundOverview.jpg"></a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="images/mooseHuntProject/8mDEM_Export.jpg"><img src="images/mooseHuntProject/8mDEM_Export.jpg"></a>
+                <p>The First step was to find more accurate data! I was supplied with a 15m Digital Elevation Model (DEM)
+                    and decided quickly that to get an edge on the competition I could find my own, more accurate DEM.
+                    I reached out using Twitter and Google, a member of the Koordinates team very kindly helped me out and
+                    I soon downloaded an updated DEM. The DEM came in four parts covering more area than I needed,
+                    so I merged the parts into a mosaic and clipped it to the study extent I was given. I coloured it and
+                    made a basic map to show the user how rough and unpleasant this ground is.</p>
+                <a class="rightarrow" href="images/mooseHuntProject/8mDEM_Export.jpg"><span> </span></a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="images/mooseHuntProject/DEM-River-Reclass.jpg"><img src="images/mooseHuntProject/DEM-River-Reclass.jpg"></a>
+                <p>Next I calculated Euclidean Distance (this marks all pixels within a set distance of a feature, a certain colour)
+                    to render all land within 200 metres of all rivers within the target area blue. I reclassifed my DEM to show land
+                    above 500 metres in elevation as red (Moose can't live here as per the spec) and all land below 500 metres as green
+                    (Hypothesis: All Dusky Sound Moose have pocket altimeters that announce them to Haast Eagles and Giant Moa should
+                    they stray above the 500m elevation cut off ;). With these visualisations done, I overlaid the two, and found that
+                    they were exceedingly ugly and not very clear, I'm sure you will agree.</p>
+                <a class="rightarrow" href="images/mooseHuntProject/DEM-River-Reclass.jpg"><span> </span></a>
+            </div>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="col-md-4">
+                <a href="images/mooseHuntProject/Slop-Reclass.jpg"><img src="images/mooseHuntProject/Slop-Reclass.jpg"></a>
+                <p>I decided to shelve the ugliness problem and instead began integrating the rest of the data needed to reduce the target area fully.
+                    This map shows the slopes in the area, reclassified to indicate slopes where our elusive Moose mates can and can't live.
+                    As per the spec, 7.5 degrees and under was required for a successful return.</p>
+                <a class="rightarrow" href="images/mooseHuntProject/Slop-Reclass.jpg"><span> </span></a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="images/mooseHuntProject/Aspecr-Reclass.jpg"><img src="images/mooseHuntProject/Aspecr-Reclass.jpg"></a>
+                <p>Next up was Aspect analysis. It was a pretty simple step to use the Aspect tool and then reclassify the results.
+                    The trick now that all of my data was processed, was to integrate everything in something that was clear and intuitive - but not too ugly.</p>
+                <a class="rightarrow" href="images/mooseHuntProject/Aspecr-Reclass.jpg"><span> </span></a>
+            </div>
+            <div class="col-md-4">
+                <a href="images/mooseHuntProject/semi-final.jpg"><img src="images/mooseHuntProject/semi-final.jpg"></a>
+                <p>This somewhat semi-final map layout took some time to test and adjust. I turned off some data so that negative
+                    results could not be seen, and fiddled with transparency to make everything work. It's less ugly, but not good enough.
+                    Fortunately all of these maps were for my own use and not primarily customer facing, so I could handle that later.</p>
+                <a class="rightarrow" href="images/mooseHuntProject/semi-final.jpg"><span> </span></a>
+            </div>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="col-md-4">
+                <a href="images/mooseHuntProject/habitableMoose.jpg"><img src="images/mooseHuntProject/habitableMoose.jpg"></a>
+                <p> Using the raster calculator tool, my next step was to combine all of my layers into one.
+                    This is where the use of the reclassify tool stood me in good stead. I had reclassified my data as ones and zeroes -
+                    binary indicating whether this place did, or did not fit one of the moose habitat criteria.
+                    The raster calculator gave me output categories between zero and four, four being all conditions met
+                    and zero being no conditions met. The project required that all criteria be met, so I reclassified the
+                    layer as a one or a zero. What previously was four, became one, everything else became a zero.
+                    From there it was simple enough to display and understand. Here is the final habitat where moose can live in the Dusky Sound!</p>
+                <a class="rightarrow" href="images/mooseHuntProject/habitableMoose.jpg"></a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="images/mooseHuntProject/3dCam1-2.jpg"><img src="images/mooseHuntProject/3dCam1-2.jpg"></a>
+                <p>During the process, I also draped these images on top of the DEM using ArcScene,
+                    to get a quick and dirty 3D visualisation of the area - I eyeballed the results to make sure there wasn't any
+                    immediately obvious errors in my analysis.</p>
+                <a class="rightarrow" href="images/mooseHuntProject/3dCam1-2.jpg"><span> </span></a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="images/mooseHuntProject/3dCam1.jpg"><img src="images/mooseHuntProject/3dCam1.jpg"></a>
+                <p>Fortunately, I also had access to some NZTM Topo50 GeoTiffs (Super High Quality Maps stored without legends,
+                    for use in applications like this) that I draped, to gain a second look at the target area.</p>
+                <a class="rightarrow" href="images/mooseHuntProject/3dCam1.jpg"><span> </span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="Portfolio-section text-center">
+        <h2><span> </span>Viewshed Analysis and Moose Hunt Maps 1.0<span> </span></h2>
+        <p>Once the viewshed analysis was complete, I set the viewshed, moose habitat and camera locations down one by one.
+            I used ArcMaps' layout view rather than the data view and added the appropriate symbology. The result,
+            after a bit of tweaking resulted in the maps you see below! These are the final products I submitted.</p>
+
+        <div class="portfolio-grid">
+
+            <div class="col-md-4">
+                <a href="images/mooseHuntProject/Camera1FanninBay.jpg"><img src="images/mooseHuntProject/Camera1FanninBay.jpg"></a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="images/mooseHuntProject/Camera2PassagePoint.jpg"><img src="images/mooseHuntProject/Camera2PassagePoint.jpg"></a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="images/mooseHuntProject/Camera3MountEdgecombe.jpg"><img src="images/mooseHuntProject/Camera3MountEdgecombe.jpg"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="images/mooseHuntProject/Camera4SeaforthRiverValley.jpg"><img src="images/mooseHuntProject/Camera4SeaforthRiverValley.jpg"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="images/mooseHuntProject/Camera5TussockPeak.jpg"><img src="images/mooseHuntProject/Camera5TussockPeak.jpg"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="images/mooseHuntProject/DuskySoundOverview.jpg"><img src="images/mooseHuntProject/DuskySoundOverview.jpg"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="Portfolio-section text-center">
+        <h2><span> </span>Other Cool Imagery<span> </span></h2>
+        <p>My finished maps successfully rendered, I had extra time on my hands before the deadline so I loaded up ArcScene.
+            This is a 3D visualisation program that I used to make sure my cameras weren't in silly places - though my eye for
+            maps has been pretty well trained by the army, mistakes do happen!</p>
+        <p>I draped NZTopo50 maps on top of my DEM, as well as taking some images with the DEM itself (Hopefully it's obvious which is which!)
+            The black dots in these images are the camera locations, with green shading marking places that can be seen by the camera.
+            The yellow shading indicates viable moose habitat!</p>
+
+        <div class="portfolio-grid">
+            <div class="col-md-6">
+                <a href="images/mooseHuntProject/3dCam1.jpg"><img src="images/mooseHuntProject/3dCam1.jpg"></a>
+            </div>
+            <div class="col-md-6">
+                <a href="images/mooseHuntProject/3dCam1-2.jpg"><img src="images/mooseHuntProject/3dCam1-2.jpg"></a>
+            </div>
+        </div>
+        <div class="portfolio-grid">
+            <div class="col-md-6">
+                <a href="images/mooseHuntProject/3dCam2.jpg"><img src="images/mooseHuntProject/3dCam2.jpg"></a>
+            </div>
+            <div class="col-md-6">
+                <a href="images/mooseHuntProject/3dCam2-2.jpg"><img src="images/mooseHuntProject/3dCam2-2.jpg"></a>
+            </div>
+        </div>
+        <div class="portfolio-grid">
+            <div class="col-md-6">
+                <a href="images/mooseHuntProject/3dCam3.jpg"><img src="images/mooseHuntProject/3dCam3.jpg"></a>
+            </div>
+            <div class="col-md-6">
+                <a href="images/mooseHuntProject/3dCam3-2.jpg"><img src="images/mooseHuntProject/3dCam3-2.jpg"></a>
+            </div>
+        </div>
+        <div class="portfolio-grid">
+            <div class="col-md-6">
+                <a href="images/mooseHuntProject/3dCam4.jpg"><img src="images/mooseHuntProject/3dCam4.jpg"></a>
+            </div>
+            <div class="col-md-6">
+                <a href="images/mooseHuntProject/3dCam4-2.jpg"><img src="images/mooseHuntProject/3dCam4-2.jpg"></a>
+            </div>
+        </div>
+        <div class="portfolio-grid">
+            <div class="col-md-6">
+                <a href="images/mooseHuntProject/3dCam5.jpg"><img src="images/mooseHuntProject/3dCam5.jpg"></a>
+            </div>
+            <div class="col-md-6">
+                <a href="images/mooseHuntProject/3dCam5-2.jpg"><img src="images/mooseHuntProject/3dCam5-2.jpg"></a>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<div  id="contact" class="footer">
+    <div class="container">
+
+        <div class="contact-section text-center">
+            <h2><span> </span>CONTACT<span> </span></h2>
+        </div>
+        <div class="row">
+            <div>
+                <div class="contact-section-custom">
+                    <div class="social-icons">
+                        <a href="http://www.linkedin.com/pub/alex-corkin/76/870/234"><img src="images/inbw.png"></a>
+                        <a href="https://twitter.com/@4lexNZ"><img src="images/twtbw.png"></a>
+                        <a href="mailto:alex@4lex.nz?subject=RAD WEBSITE BRO"><img src="images/mail.png" style="width:30px;height:30px"></a>
+                    </div>
+                    <p>If you have any queries about my experiences or interests, or you are looking for someone in regards to development work,
+                        feel free to send me a message. I can be contacted using the social media buttons above this paragraph!</p>
+                </div>
+            </div>
+            <p class="copy-right">Template by <a href="http://w3layouts.com/">W3layouts</a></p>
+        </div>
+    </div>
+</div>
+<a class="up scroll" href="#top-top"><span> </span></a>
+
+</div>
+</div>
+</body>
+</html>
