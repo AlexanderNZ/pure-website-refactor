@@ -37,6 +37,9 @@
             float: left;
         }
 
+        .content-center {
+            text-align: center;
+        }
     </style>
 
 </head>
@@ -96,7 +99,9 @@
             <div>
                 <h3>All of the Imagery I created for this task can be found below!</h3>
 
-                <p>(Scroll left and right with the arrow keys)</p>
+                <div class="content-center">
+                    <p>(Scroll left and right with the arrow keys)</p>
+                </div>
 
                 <script>
                     $(function () {
@@ -111,113 +116,126 @@
                 <div class="image">
                     <ul>
                         <li>
-                            <figure><img src="images-resize/mooseHunt-slider-images/DuskySoundOverview.jpg" style="width: 776px; height: 520px;">
-                                <figcaption>This map provides an overview of the target area, with only the most critical information displayed. If
-                                    you only have ten seconds to look at the target before you move, this is the map you want.
-                                </figcaption>
+                            <figure><a href="images/mooseHunt-slider-images/full-size/DuskySoundOverview.jpg" target="_blank"><img
+                                    src="images/mooseHunt-slider-images/DuskySoundOverview.jpg" style="width: 776px; height: 520px;"></a>
+                                <!--<figcaption>This map provides an overview of the target area, with only the most critical information displayed. If-->
+                                <!--you only have ten seconds to look at the target before you move, this is the map you want.-->
+                                <!--</figcaption>-->
                             </figure>
                         </li>
                         <li>
-                            <figure><img src="images-resize/mooseHunt-slider-images/8mDEM_Export.jpg" style="width: 776px; height: 520px;">
-                                <figcaption>The First step was to find more accurate data! I was supplied with a 15m Digital Elevation Model (DEM) and
-                                    decided quickly that to get an edge on the competition I could find my own, more accurate DEM. I reached out using
-                                    Twitter and Google, a member of the Koordinates team very kindly helped me out and I soon downloaded an updated
-                                    DEM. The DEM came in four parts covering more area than I needed, so I merged the parts into a mosaic and clipped
-                                    it to the study extent I was given. I coloured it and made a basic map to show the user how rough and unpleasant
-                                    this ground is.
-                                </figcaption>
+                            <figure><a href="images/mooseHunt-slider-images/full-size/8mDEM_Export.jpg" target="_blank"><img
+                                    src="images/mooseHunt-slider-images/8mDEM_Export.jpg" style="width: 776px; height: 520px;"></a>
+                                <!--<figcaption>The First step was to find more accurate data! I was supplied with a 15m Digital Elevation Model (DEM) and-->
+                                <!--decided quickly that to get an edge on the competition I could find my own, more accurate DEM. I reached out using-->
+                                <!--Twitter and Google, a member of the Koordinates team very kindly helped me out and I soon downloaded an updated-->
+                                <!--DEM. The DEM came in four parts covering more area than I needed, so I merged the parts into a mosaic and clipped-->
+                                <!--it to the study extent I was given. I coloured it and made a basic map to show the user how rough and unpleasant-->
+                                <!--this ground is.-->
+                                <!--</figcaption>-->
                             </figure>
                         </li>
                         <li>
-                            <figure><img src="images-resize/mooseHunt-slider-images/DEM-River-Reclass.jpg" style="width: 776px; height: 520px;">
-                                <figcaption>Next I calculated Euclidean Distance (this marks all pixels within a set distance of a feature, a certain
-                                    colour) to render all land within 200 metres of all rivers within the target area blue. I reclassifed my DEM to
-                                    show land above 500 metres in elevation as red (Moose can't live here as per the spec) and all land below 500
-                                    metres as green (Hypothesis: All Dusky Sound Moose have pocket altimeters that announce them to Haast Eagles and
-                                    Giant Moa should they stray above the 500m elevation cut off ;). With these visualisations done, I overlaid the
-                                    two, and found that they were exceedingly ugly and not very clear, I'm sure you will agree
-                                </figcaption>
+                            <figure><a href="images/mooseHunt-slider-images/full-size/DEM-River-Reclass.jpg" target="_blank"><img
+                                    src="images/mooseHunt-slider-images/DEM-River-Reclass.jpg" style="width: 776px; height: 520px;"></a>
+                                <!--<figcaption>Next I calculated Euclidean Distance (this marks all pixels within a set distance of a feature, a certain-->
+                                <!--colour) to render all land within 200 metres of all rivers within the target area blue. I reclassifed my DEM to-->
+                                <!--show land above 500 metres in elevation as red (Moose can't live here as per the spec) and all land below 500-->
+                                <!--metres as green (Hypothesis: All Dusky Sound Moose have pocket altimeters that announce them to Haast Eagles and-->
+                                <!--Giant Moa should they stray above the 500m elevation cut off ;). With these visualisations done, I overlaid the-->
+                                <!--two, and found that they were exceedingly ugly and not very clear, I'm sure you will agree-->
+                                <!--</figcaption>-->
                             </figure>
                         </li>
                         <li>
-                            <figure><img src="images-resize/mooseHunt-slider-images/Slop-Reclass.jpgg" style="width: 776px; height: 520px;">
-                                <figcaption>I decided to shelve the ugliness problem and instead began integrating the rest of the data needed to
-                                    reduce the target area fully. This map shows the slopes in the area, reclassified to indicate slopes where our
-                                    elusive Moose mates can and can't live. As per the spec, 7.5 degrees and under was required for a successful
-                                    return.
-                                </figcaption>
+                            <figure><a href="image/mooseHunt-slider-images/full-size/Slop-Reclass.jpg" target="_blank"><img
+                                    src="images/mooseHunt-slider-images/Slop-Reclass.jpg" style="width: 776px; height: 520px;"></a>
+                                <!--<figcaption>I decided to shelve the ugliness problem and instead began integrating the rest of the data needed to-->
+                                <!--reduce the target area fully. This map shows the slopes in the area, reclassified to indicate slopes where our-->
+                                <!--elusive Moose mates can and can't live. As per the spec, 7.5 degrees and under was required for a successful-->
+                                <!--return.-->
+                                <!--</figcaption>-->
                             </figure>
                         </li>
                         <li>
-                            <figure><img src="images-resize/mooseHunt-slider-images/Aspecr-Reclass.jpg" style="width: 776px; height: 520px;">
-                                <figcaption>Next up was Aspect analysis. It was a pretty simple step to use the Aspect tool and then reclassify the
-                                    results. The trick now that all of my data was processed, was to integrate everything in something that was clear
-                                    and intuitive - but not too ugly.
-                                </figcaption>
+                            <figure><a href="images/mooseHunt-slider-images/full-size/Aspecr-Reclass.jpg" target="_blank"><img
+                                    src="images/mooseHunt-slider-images/Aspecr-Reclass.jpg" style="width: 776px; height: 520px;"></a>
+                                <!--<figcaption>Next up was Aspect analysis. It was a pretty simple step to use the Aspect tool and then reclassify the-->
+                                <!--results. The trick now that all of my data was processed, was to integrate everything in something that was clear-->
+                                <!--and intuitive - but not too ugly.-->
+                                <!--</figcaption>-->
                             </figure>
                         </li>
                         <li>
-                            <figure><img src="images-resize/mooseHunt-slider-images/semi-final.jpg" style="width: 776px; height: 520px;">
-                                <figcaption>This somewhat semi-final map layout took some time to test and adjust. I turned off some data so that
-                                    negative results could not be seen, and fiddled with transparency to make everything work. It's less ugly, but not
-                                    good enough. Fortunately all of these maps were for my own use and not primarily customer facing, so I could
-                                    handle that later.
-                                </figcaption>
+                            <figure><a href="images/mooseHunt-slider-images/full-size/semi-final.jpg" target="_blank"><img
+                                    src="images/mooseHunt-slider-images/semi-final.jpg" style="width: 776px; height: 520px;"></a>
+                                <!--<figcaption>This somewhat semi-final map layout took some time to test and adjust. I turned off some data so that-->
+                                <!--negative results could not be seen, and fiddled with transparency to make everything work. It's less ugly, but not-->
+                                <!--good enough. Fortunately all of these maps were for my own use and not primarily customer facing, so I could-->
+                                <!--handle that later.-->
+                                <!--</figcaption>-->
                             </figure>
                         </li>
                         <li>
-                            <figure><img src="images-resize/mooseHunt-slider-images/habitableMoose.jpg" style="width: 776px; height: 520px;">
-                                <figcaption>Using the raster calculator tool, my next step was to combine all of my layers into one. This is where the
-                                    use of the reclassify tool stood me in good stead. I had reclassified my data as ones and zeroes - binary
-                                    indicating whether this place did, or did not fit one of the moose habitat criteria. The raster calculator gave me
-                                    output categories between zero and four, four being all conditions met and zero being no conditions met. The
-                                    project required that all criteria be met, so I reclassified the layer as a one or a zero. What previously was
-                                    four, became one, everything else became a zero. From there it was simple enough to display and understand. Here
-                                    is the final habitat where moose can live in the Dusky Sound!
-                                </figcaption>
+                            <figure><a href="images/mooseHunt-slider-images/full-size/habitableMoose.jpg" target="_blank"><img
+                                    src="images/mooseHunt-slider-images/habitableMoose.jpg" style="width: 776px; height: 520px;"></a>
+                                <!--<figcaption>Using the raster calculator tool, my next step was to combine all of my layers into one. This is where the-->
+                                <!--use of the reclassify tool stood me in good stead. I had reclassified my data as ones and zeroes - binary-->
+                                <!--indicating whether this place did, or did not fit one of the moose habitat criteria. The raster calculator gave me-->
+                                <!--output categories between zero and four, four being all conditions met and zero being no conditions met. The-->
+                                <!--project required that all criteria be met, so I reclassified the layer as a one or a zero. What previously was-->
+                                <!--four, became one, everything else became a zero. From there it was simple enough to display and understand. Here-->
+                                <!--is the final habitat where moose can live in the Dusky Sound!-->
+                                <!--</figcaption>-->
                             </figure>
                         </li>
                         <li>
-                            <figure><img src="images-resize/mooseHunt-slider-images/Camera1FanninBay.jpg" style="width: 776px; height: 520px;">
-                                <figcaption>This camera can cover a significant portion of Fannin Bay. It was a hard one to place due to the
-                                    undulating terrain around Fannin Bay. I was able to cover most of the area, but If I had more time or an extra
-                                    camera, I might have tried to increase my coverage here.
-                                </figcaption>
+                            <figure><a href="images/mooseHunt-slider-images/full-size/Camera1FanninBay.jpg" target="_blank"><img
+                                    src="images/mooseHunt-slider-images/Camera1FanninBay.jpg" style="width: 776px; height: 520px;"></a>
+                                <!--<figcaption>This camera can cover a significant portion of Fannin Bay. It was a hard one to place due to the-->
+                                <!--undulating terrain around Fannin Bay. I was able to cover most of the area, but If I had more time or an extra-->
+                                <!--camera, I might have tried to increase my coverage here.-->
+                                <!--</figcaption>-->
                             </figure>
                         </li>
                         <li>
-                            <figure><img src="images-resize/mooseHunt-slider-images/Camera2PassagePoint.jpg" style="width: 776px; height: 520px;">
-                                <figcaption>Passage Point is a good place for a camera, the habitable area is quite focused on a plain near the point
-                                    itself, with good hills that overlook the target area - they aren't too shallow or too steep to inhibit downslope
-                                    vision.
-                                </figcaption>
+                            <figure><a href="images/mooseHunt-slider-images/full-size/Camera2PassagePoint.jpg" target="_blank"><img
+                                    src="images/mooseHunt-slider-images/Camera2PassagePoint.jpg" style="width: 776px; height: 520px;"></a>
+                                <!--<figcaption>Passage Point is a good place for a camera, the habitable area is quite focused on a plain near the point-->
+                                <!--itself, with good hills that overlook the target area - they aren't too shallow or too steep to inhibit downslope-->
+                                <!--vision.-->
+                                <!--</figcaption>-->
                             </figure>
                         </li>
                         <li>
-                            <figure><img src="images-resize/mooseHunt-slider-images/Camera3MountEdgecombe.jpg" style="width: 776px; height: 520px;">
-                                <figcaption>Mount Edgecombe was a tricky one. I placed the camera on some high ground and covered the largest
-                                    habitable area. I had to accept that due to the steep ravines at inconvenient angles to the main plain in the
-                                    area, I wouldn't be able to cover everything with one camera.
-                                </figcaption>
+                            <figure><a href="images/mooseHunt-slider-images/full-size/Camera3MountEdgecombe.jpg" target="_blank"><img
+                                    src="images/mooseHunt-slider-images/Camera3MountEdgecombe.jpg" style="width: 776px; height: 520px;"></a>
+                                <!--<figcaption>Mount Edgecombe was a tricky one. I placed the camera on some high ground and covered the largest-->
+                                <!--habitable area. I had to accept that due to the steep ravines at inconvenient angles to the main plain in the-->
+                                <!--area, I wouldn't be able to cover everything with one camera.-->
+                                <!--</figcaption>-->
                             </figure>
                         </li>
                         <li>
-                            <figure><img src="images-resize/mooseHunt-slider-images/Camera4SeaforthRiverValley.jpg"
-                                         style="width: 776px; height: 520px;">
-                                <figcaption>The Seaforth River Valley was a good find. With extra time to tweak the camera, I could have covered more,
-                                    but I'm happy with the amount of coverage I did get.
-                                </figcaption>
+                            <figure><a href="images/mooseHunt-slider-images/full-size/Camera4SeaforthRiverValley.jpg" target="_blank"><img
+                                    src="images/mooseHunt-slider-images/Camera4SeaforthRiverValley.jpg"
+                                    style="width: 776px; height: 520px;"></a>
+                                <!--<figcaption>The Seaforth River Valley was a good find. With extra time to tweak the camera, I could have covered more,-->
+                                <!--but I'm happy with the amount of coverage I did get.-->
+                                <!--</figcaption>-->
                             </figure>
                         </li>
                         <li>
-                            <figure><img src="images-resize/mooseHunt-slider-images/Camera5TussockPeak.jpg" style="width: 776px; height: 520px;">
-                                <figcaption>Tussock Peak is a good location for a camera to be placed. The slopes to the North provide good fields of
-                                    view over the majority of the habitable area in that location.
-                                </figcaption>
+                            <figure><a href="images/mooseHunt-slider-images/full-size/Camera5TussockPeak.jpg" target="_blank"><img
+                                    src="images/mooseHunt-slider-images/Camera5TussockPeak.jpg" style="width: 776px; height: 520px;"></a>
+                                <!--<figcaption>Tussock Peak is a good location for a camera to be placed. The slopes to the North provide good fields of-->
+                                <!--view over the majority of the habitable area in that location.-->
+                                <!--</figcaption>-->
                             </figure>
                         </li>
                     </ul>
                 </div>
+
             </div>
 
             <h3>Execution</h3>
