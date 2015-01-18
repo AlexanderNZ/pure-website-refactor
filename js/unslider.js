@@ -24,7 +24,7 @@
         //  Set some options
         this.opts = {
             speed: 500,
-            delay: 15000, // f for no autoplay
+            delay: 3000, // f for no autoplay
             complete: f, // when a slide's finished
             keys: !f, // keyboard shortcuts - disable if it breaks things
             dots: f, // display â€¢â€¢â€¢â€¢oâ€¢ pagination
