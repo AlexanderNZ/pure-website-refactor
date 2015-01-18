@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="The personal Website of Alex Corkin">
+
+    <title>Soldier's 5 | GIS Analysis</title>
+
+    <link rel="stylesheet" href="css/pure-min.css">
+    <link href="//vjs.zencdn.net/4.11/video-js.css" rel="stylesheet">
+    <script src="//vjs.zencdn.net/4.11/video.js"></script>
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/unslider.js"></script>
+
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="css/layouts/side-menu.css">
+    <!--<![endif]-->
+
+    <style>
+
+        .image {
+            position: relative;
+            overflow: auto;
+        }
+
+        .image li {
+            list-style: none;
+        }
+
+        .image ul li {
+            float: left;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+            <a class="pure-menu-heading">Routes</a>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>Soldier's 5</h1>
+
+            <h2>Alex Corkin</h2>
+        </div>
+
+        <div class="content">
+
+            <h2 class="content-subhead">My Name is Alex</h2>
+
+            <p>And this is my portfolio overview.</p>
+
+            <h3>GIS Analysis: Dusky Sounds Moose Hunt</h3>
+
+            <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
+                   controls preload="auto" width="640" height="264"
+                   data-setup='{"example_option":true}'>
+                <source src="mooseHuntVid.mp4" type='video/mp4'/>
+                <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web
+                    browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5
+                        video</a></p>
+            </video>
+
+            <h2>Introduction</h2>
+
+            <p>This project was assigned to me by the University of Auckland School of Environment. The aim was to take disparate geographic
+                information and transform it into something that was useful to the layman. In order to achieve this the data had to be gathered,
+                processed and displayed accurately, briefly and clearly - in a manner that is pleasing to the eye. The submission format required was
+                an A3 Poster PDF, though I am currently experimenting with a few APIs that might allow me to render it online!</p>
+
+            <h3>Execution</h3>
+
+            <p>Using University licenced copies of the Arc Series from ESRI, I undertook the analysis in line with project requirements. Let me say
+                right now that I LOVE ArcGIS, I'm a huge fan of the software set that ESRI produces and particularly enjoy the documentation - it is
+                incredibly easy to commit a naive solution to a problem within the due date, then refine that solution at a later stage using the
+                extensive documentation, as well as online community help available.</p>
+
+            <p>To complete this project I used the Spatial Analyst extension for ArcMap and ArcScene. I was supplied with a study extent shapefile,
+                as well as a Digitel Elevation Model (Probably collected with a Satellite rather than LIDAR equipped aircraft). I was also given low
+                resolution aerial imagery from one of the other University projects.</p>
+
+            <p>In order to complete the project I needed to figure out where the best places within the Dusky Sound (in the South Island of New
+                Zealand) were, to place motion activated surveillance cameras that would capture Moose activity!For the purposes of this project,
+                Moose only lived in the study extent, within the following bounds:</p>
+
+            <ol>
+                <li>Below 500 metres in elevation.</li>
+                <li>On slopes less than 7.5 degrees.</li>
+                <li>Within 200 metres of a river.</li>
+                <li>On South Westerly, Southern and South Eastern Slope Aspects</li>
+            </ol>
+
+            <p>ArcMap was my go-to tool, particularly with the functions that I could access via Spatial Analyst. To solve the problem, I used the
+                Slope, Aspect, Euclidean Distance, Reclassify, Mosaic and Raster Calculator tools that were part of the Spatial Analyst Extension</p>
+
+            <h3>All of the Imagery I created for this task can be found below!</h3>
+
+            <div class="slider">
+
+                <script>
+                    $(function () {
+                        $('.image').unslider();
+                    });
+
+                    var slidey = $('.banner').unslider(),
+                            data = slidey.data('unslider');
+
+                    data.dots();
+                </script>
+
+                <div class="image">
+                    <ul>
+                        <li><img src="images-resize/mooseHunt-slider-images/DuskySoundOverview.jpg" style="width: 776px; height: 520px;"></li>
+                        <li><img src="images-resize/mooseHunt-slider-images/8mDEM_Export.jpg" style="width: 776px; height: 520px;"></li>
+                        <li><img src="images-resize/mooseHunt-slider-images/DEM-River-Reclass.jpg" style="width: 776px; height: 520px;"></li>
+                        <li><img src="images-resize/mooseHunt-slider-images/Slop-Reclass.jpg" style="width: 776px; height: 520px;"></li>
+                        <li><img src="images-resize/mooseHunt-slider-images/Aspecr-Reclass.jpg" style="width: 776px; height: 520px;"></li>
+                        <li><img src="images-resize/mooseHunt-slider-images/semi-final.jpg" style="width: 776px; height: 520px;"></li>
+                        <li><img src="images-resize/mooseHunt-slider-images/habitableMoose.jpg" style="width: 776px; height: 520px;"></li>
+                        <li><img src="images-resize/mooseHunt-slider-images/Camera1FanninBay.jpg" style="width: 776px; height: 520px;"></li>
+                        <li><img src="images-resize/mooseHunt-slider-images/Camera2PassagePoint.jpg" style="width: 776px; height: 520px;"></li>
+                        <li><img src="images-resize/mooseHunt-slider-images/Camera3MountEdgecombe.jpg" style="width: 776px; height: 520px;"></li>
+                        <li><img src="images-resize/mooseHunt-slider-images/Camera4SeaforthRiverValley.jpg" style="width: 776px; height: 520px;"></li>
+                        <li><img src="images-resize/mooseHunt-slider-images/Camera5TussockPeak.jpg" style="width: 776px; height: 520px;"></li>
+                        <li><img src="images-resize/mooseHunt-slider-images/DuskySoundOverview.jpg" style="width: 776px; height: 520px;"></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-1-3"></div>
+            <div class="pure-u-1-3">
+                <div>
+                    <a href="http://www.linkedin.com/pub/alex-corkin/76/870/234"><img src="images/linkedin.png"
+                                                                                      style="width: 20%; height: 20%"></a>
+                    <a href="https://twitter.com/@4lexNZ"><img src="images/twitter.png"
+                                                               style="width: 20%; height: 20%"></a>
+                    <a href="https://github.com/AlexanderNZ"><img src="images/github.png"
+                                                                  style="width: 20%; height: 20%"></a>
+                    <a href="mailto:alex@4lex.nz"><img src="images/email.png"
+                                                       style="width: 20%; height: 20%"></a>
+                </div>
+            </div>
+            <div class="pure-u-1-3"></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/ui.js"></script>
+
+</body>
+</html>
